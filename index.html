@@ -2,8 +2,8 @@
     <meta charset="UTF-8">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
@@ -47,19 +47,25 @@
 
     <div class="row featured-projects">
         <div class="col-md-4 project">
-            <img class="img-responsive project-img" src="images-src/p-mockuptoarticle.png" alt="placeholder" data-toggle="modal" data-target="#project1">
+            <div class="project-img-container">
+                <img class="img-responsive project-img" src="images-src/p-mockuptoarticle.png" alt="placeholder" data-toggle="modal" data-target="#project1">
+            </div>
             <p class="project-text">The aim of this project was to practice HTML syntax by converting a mockup of a blog article into a real website.</p>
-            <p class="project-link"><a href="http://github.com/">View project on GitHub</a></p>
+            <p class="project-link"><button type="button" class="btn btn-primary"><a href="http://github.com/">View project on GitHub</a></button></p>
         </div>
-            <div class="col-md-4 col2 project">
-            <img class="img-responsive project-img" src="images-src/p-animalcard.png" alt="placeholder" data-toggle="modal" data-target="#project2">
+        <div class="col-md-4 col2 project">
+            <div class="project-img-container">
+                <img class="img-responsive project-img" src="images-src/p-animalcard.png" alt="placeholder" data-toggle="modal" data-target="#project2">
+            </div>
             <p class="project-text">The aim of this project was to practice CCS syntax by converting a design prototype into a functional webpage.</p>
-            <p class="project-link"><a href="http://github.com/">View project on GitHub</a></p>
+            <p class="project-link"><button type="button" class="btn btn-primary"><a href="http://github.com/">View project on GitHub</a></button></p>
         </div>
         <div class="col-md-4 project">
-            <img class="img-responsive project-img" src="images-src/p-portfolio.png" alt="placeholder" data-toggle="modal" data-target="#project3">
+            <div class="project-img-container">
+                <img class="img-responsive project-img" src="images-src/p-portfolio.png" alt="placeholder" data-toggle="modal" data-target="#project3">
+            </div>
             <p class="project-text">The primary aim of this project was to develop a responsive website that will display images, descriptions and links to each of the projects completed in the nanodegree.</p>
-            <p class="project-link"><a href="http://github.com/">View roject on GitHub</a></p>
+            <p class="project-link"><button type="button" class="btn btn-primary"><a href="http://github.com/">View project on GitHub</a></button></p>
         </div>
     </div>
 

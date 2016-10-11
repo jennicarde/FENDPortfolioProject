@@ -79,7 +79,6 @@ a:hover {
 
 .hero-bg {
   background: #F9FDFF;
-  border: 2px solid rgba(233, 56, 84, 0.1);
   height: 400px;
   margin: 50px 0;
   overflow: hidden;
@@ -90,7 +89,6 @@ a:hover {
   width: 100%;
   padding: 0;
   margin: 0;
-  filter: blur(5px);
   filter:opacity(60%);
 }
 
@@ -120,9 +118,9 @@ a:hover {
   min-height: 1px;
   margin-right: 20px;
   padding: 0;
-  box-shadow: 12px 12px 18px -7px rgba(233, 56, 84, 0.1);
-  -webkit-box-shadow: 12px 12px 18px -7px rgba(233, 56, 84, 0.1);
-  -moz-box-shadow: 12px 12px 18px -7px rgba(233, 56, 84, 0.1);
+  box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
+  -webkit-box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
+  -moz-box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
 }
 
 .project:last-of-type {
@@ -138,6 +136,25 @@ a:hover {
 
 .project-link {
   text-align: center;
+}
+
+.btn-primary {
+  background-color: #E93854;
+  border: none;
+  margin: 10px;
+}
+
+.btn-primary:hover {
+  background-color: hotpink;
+  border: none;
+}
+
+.btn-primary a {
+  color: #F9FDFF;
+}
+
+.btn-primary a:hover {
+  text-decoration: none;
 }
 
 .project-img {
@@ -170,4 +187,64 @@ a:hover {
 
 .social-media a:hover {
   color: hotpink;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:400px) {
+  .image-logo {
+    display: none;
+  }
+  .title-super {
+    font-size: 2.7em;
+    margin-right: -15px;
+    padding-right: 10%;
+  }
+  .title-sub {
+    font-size: 18px;
+  }
+  .hero-bg {
+    height: auto;
+    margin: 25px 0;
+  }
+  .hero-text {
+    padding: 0 60px;
+    top: 170px;
+  }
+  .hero-super {
+    font-size: 3em;
+  }
+  .hero-sub {
+    font-size: 2em;
+  }
+  .featured-title h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .project {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .project-img-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  footer {
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .copyright, .social-media {
+    float: none !important;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .copyright {
+    order:1;
+    font-size: 12px;
+  }
+  .social-media {
+    order: 0;
+    display: inline;
+  }
 }
