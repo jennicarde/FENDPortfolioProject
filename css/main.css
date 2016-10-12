@@ -59,15 +59,18 @@ a:hover {
 /* ************** Target Elements *************** */
 
 .image-logo {
-  margin-top: 25px;
-  width: 15%;
+  margin: 25px 0px 5px 0px;
+  width: 33%;
+}
+.image-logo-left {
+  display: none;
 }
 
 .title-super {
   font-size: 4em;
   background-color: #E93854;
   color: #F9FDFF;
-  margin-right: -65px;
+  margin-right: -105px;
   margin-bottom: 0;
   padding: 15px 0;
   padding-right: 25%;
@@ -78,7 +81,8 @@ a:hover {
 }
 
 .hero-bg {
-  background: #F9FDFF;
+  position: relative;
+  width: 100%;
   height: 400px;
   margin: 50px 0;
   overflow: hidden;
@@ -93,17 +97,18 @@ a:hover {
 }
 
 .hero-text {
-  padding: 60px;
   position: absolute;
-  top: 200px;
-  left: 0;
-  width: 100%;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 400px;
 }
 
 .hero-super {
   font-size: 10em;
   font-weight: bolder;
   text-decoration: underline;
+  margin-left: -50px;
 }
 
 .hero-sub {
@@ -115,7 +120,7 @@ a:hover {
   width: calc((100% - 40px)/3);
   position: relative;
   float: left;
-  min-height: 1px;
+  min-height: 450px;
   margin-right: 20px;
   padding: 0;
   box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
@@ -136,6 +141,9 @@ a:hover {
 
 .project-link {
   text-align: center;
+  position: absolute;
+  bottom: 10;
+  width: 100%;
 }
 
 .btn-primary {
@@ -191,9 +199,15 @@ a:hover {
 
 /* Media Queries */
 
-@media screen and (max-width:400px) {
-  .image-logo {
+@media screen and (max-width:450px) {
+  .image-logo-main {
     display: none;
+  }
+  .image-logo-left {
+    display: inline-block;
+    width: 18%;
+    padding: 0 5px;
+    margin: 0 10 5 0;
   }
   .title-super {
     font-size: 2.7em;
@@ -203,19 +217,17 @@ a:hover {
   .title-sub {
     font-size: 18px;
   }
-  .hero-bg {
+  .hero-bg, .hero-text {
     height: auto;
-    margin: 25px 0;
-  }
-  .hero-text {
-    padding: 0 60px;
-    top: 170px;
   }
   .hero-super {
-    font-size: 3em;
+    font-size: 6em;
+    margin: 0 0 5 0;
   }
   .hero-sub {
     font-size: 2em;
+    width: 70%;
+    margin: 0 auto;
   }
   .featured-title h2 {
     font-size: 24px;
@@ -224,10 +236,14 @@ a:hover {
   .project {
     width: 100%;
     margin: 10px 0;
+    min-height: 1px;
   }
   .project-img-container {
     height: 200px;
     overflow: hidden;
+  }
+  .project-link {
+    position: relative;
   }
   footer {
     height: 120px;
@@ -249,5 +265,200 @@ a:hover {
   }
 }
 
-@media screen and (max-width:650px) {
+@media (min-width:450px) and (max-width:500px) {
+  /* specific changes to font */
+  .image-logo-main {
+    display: none;
+  }
+  .image-logo-left {
+    display: inline-block;
+    width: 18%;
+    padding: 0 5px;
+    margin: 0 10 5 0;
+  }
+  .title-super {
+    font-size: 3.2em;
+    margin-right: -15px;
+    padding-right: 10%;
+  }
+  .title-sub {
+    font-size: 18px;
+  }
+  /*
+  .hero-bg, .hero-text {
+    height: auto;
+  } */
+  .hero-bg {
+    margin-bottom: 0;
+    height: 340px;
+  }
+  .hero-text {
+    height: 340px;
+  }
+  .hero-super {
+    font-size: 7em;
+    margin: 0 10px;
+    padding-top: 20px;
+  }
+  .hero-sub {
+    font-size: 2.8em;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .featured-title h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  .project {
+    width: 100%;
+    margin: 10px 0;
+    min-height: 1px;
+  }
+  .project-img-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  .project-link {
+    position: relative;
+    bottom: 10;
+  }
+  footer {
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .copyright, .social-media {
+    float: none !important;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .copyright {
+    order:1;
+    font-size: 12px;
+  }
+  .social-media {
+    order: 0;
+    display: inline;
+  }
+}
+
+@media (min-width:500px) and (max-width:650px) {
+  .image-logo-main {
+    display: none;
+  }
+  .image-logo-left {
+    display: inline-block;
+    width: 16%;
+    float: left;
+    padding: 0 5px;
+    margin: 0 0 5 0;
+  }
+  .title-topbar {
+    padding: 0;
+  }
+  .top-title {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .title-super {
+    margin: 0;
+    padding: 20px;
+  }
+  .title-sub {
+    padding: 0 20px;
+  }
+  .featured-title {
+    text-align: center;
+    padding: 0;
+  }
+  .featured-projects {
+    text-align: center;
+  }
+  .project {
+    width: 70%;
+    margin: 10px 0;
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+    min-height: 1px;
+  }
+  .project-img-container {
+    height: 200px;
+    overflow: hidden;
+  }
+  .project-link {
+    position: relative;
+    bottom: 10;
+  }
+  footer {
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .copyright, .social-media {
+    float: none !important;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .copyright {
+    order:1;
+    font-size: 12px;
+  }
+  .social-media {
+    order: 0;
+    display: inline;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .image-logo-main {
+    display: none;
+  }
+  .image-logo-left {
+    display: inline-block;
+    width: 14%;
+    float: left;
+    padding: 0 10;
+    margin: 0 10 20 20;
+  }
+
+  .title-topbar {
+    padding: 0;
+  }
+  .top-title {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .title-super {
+    margin: 0;
+    padding: 20px;
+  }
+  .project {
+    min-height: 440px;
+  }
+  footer {
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .copyright, .social-media {
+    float: none !important;
+    margin: 0 auto;
+    padding-top: 15px;
+  }
+  .copyright {
+    order:1;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+  .social-media {
+    order: 0;
+    display: inline;
+  }
 }
