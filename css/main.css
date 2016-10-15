@@ -66,7 +66,7 @@ a:hover {
 
   .image-logo {
     margin: 25px 0px 5px 0px;
-    width: 74%;
+    width: 78%;
   }
 
   .top-logo, .top-title {
@@ -144,10 +144,6 @@ a:hover {
     box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
     -webkit-box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
     -moz-box-shadow: 14px 14px 18px -7px rgba(211, 211, 211, 0.6);
-  }
-
-  .project:last-of-type {
-    margin-right: 0;
   }
 
   .project-text {
@@ -232,11 +228,104 @@ a:hover {
     color: hotpink;
   }
 
-@media screen and (min-width:800px) {
+
+@media screen and (min-width:544px) {
+  .image-logo {
+    width: 68%;
+  }
+
+  .title-super {
+    font-size: 5.2rem;
+    padding: 15px 0;
+    padding-right: 15%;
+  }
+
+  .title-sub {
+    margin-top: 5px;
+    font-size: 2rem;
+  }
+  .hero-super {
+    font-size: 7.4em;
+  }
+
+  .hero-sub {
+    font-size: 3.2em;
+  }
+
+  .project {
+    width: 70%;
+    position: relative;
+    min-height: 1px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .project-img-container {
+    height: 200px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .image-logo {
+    width: 60%;
+  }
+
+  .title-super {
+    font-size: 6.2rem;
+    padding: 15px 0;
+    padding-right: 15%;
+  }
+
+  .title-sub {
+    margin-top: 5px;
+    font-size: 2rem;
+  }
+
+  .hero-super {
+    font-size: 9em;
+  }
+
+  .hero-sub {
+    font-size: 3em;
+    width: 90%;
+  }
+
+  .project {
+    width: 80%;
+    position: relative;
+    min-height: 1px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .project-img-container {
+    height: 300px;
+    overflow: hidden;
+  }
+
+  footer {
+    display: block;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: #E93854;
+    color: #F9FDFF;
+    margin-top: 60px;
+  }
+
+  .copyright {
+    float: left !important;
+  }
+
+  .social-media {
+    float: right !important;
+  }
 
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .image-logo {
     width: 33%;
   }
@@ -284,9 +373,22 @@ a:hover {
     padding: 0;
   }
 
+  .project:last-of-type {
+    margin-right: 0;
+  }
+
+  .project-img-container {
+    height: auto;
+    overflow: hidden;
+  }
+
   .project-link {
     position: absolute;
     bottom: 10;
+  }
+
+  .project-text {
+    width: 90%%;
   }
 
   footer {
